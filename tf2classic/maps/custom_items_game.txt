@@ -26226,6 +26226,11 @@ Edited by: 'Reagy'"
 					"attribute_class"	"set_weapon_mode"
 					"value" 			"10"
 				}
+				"hitscan apply condition"
+				{
+					"attribute_class"	"hitscan apply condition"
+					"value" 			"1 0 2.0 121 111 33"
+				}
 			}
 			"visuals"																			
 			{
@@ -31356,6 +31361,14 @@ Weapon from: Fred's Fight Starters"
 			"effect_type"	"positive"
 			"armory_Desc"	"on_active"
 			"stored_as_integer"	"0"
+		}
+		"30060"
+		{
+			"name"	"hitscan apply condition"
+			"attribute_class"	"hitscan apply condition"
+			"description_string"	"Test Attribute!"
+			"description_format"	"value_is_additive"
+			"effect_type"	"positive"
 		}
 	}
 }	
