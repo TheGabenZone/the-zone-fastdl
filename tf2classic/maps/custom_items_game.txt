@@ -8751,7 +8751,7 @@ Weapon by: 'The One Of Wonders'"
 					"attribute_class"	"set_charge_type"
 					"value"				"1"
 				}
-				"Test Attribute" 
+				"assist charge healer" 
 				{
 					"attribute_class"	"assist charge healer"
 					"value"				"5 512 50 5"
@@ -46362,13 +46362,12 @@ In Slam Fire: +25% fire rate and infinite clip"
 		
 		"32010"
 		{
-			"name"					"Test Attribute"
-			"attribute_class"		"assist charge healer"
-			"description_string"	"Test attribute real!"
-			"attribute_type"		"string"													
+			"name"	"assist charge healer"
+			"attribute_class"	"assist charge healer"
+			"attribute_type"	"string"
 			"description_format"	"value_is_additive"
-			"custom_color"			"225 215 0 255"	
-			"effect_type"			"positive"
+			"hidden"	"1"
+			"effect_type"	"neutral"
 		}
 	}
 }
