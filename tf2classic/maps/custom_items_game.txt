@@ -26226,10 +26226,30 @@ Edited by: 'Reagy'"
 					"attribute_class"	"set_weapon_mode"
 					"value" 			"10"
 				}
-				"hitscan apply condition"
+				"test attribute 1"
 				{
-					"attribute_class"	"hitscan apply condition"
-					"value" 			"1 0 2.0 121 111 33"
+					"attribute_class"	"hitscan_cond_active"
+					"value" 			"1.0"
+				}
+				"test attribute 2"
+				{
+					"attribute_class"	"hitscan_cond_target"
+					"value" 			"0"
+				}
+				"test attribute 3"
+				{
+					"attribute_class"	"hitscan_cond_duration"
+					"value" 			"2.0"
+				}
+				"test attribute 4"
+				{
+					"attribute_class"	"hitscan_cond_id1"
+					"value" 			"121"
+				}
+				"test attribute 5"
+				{
+					"attribute_class"	"hitscan_cond_id2"
+					"value" 			"111"
 				}
 			}
 			"visuals"																			
@@ -31364,9 +31384,41 @@ Weapon from: Fred's Fight Starters"
 		}
 		"30060"
 		{
-			"name"	"hitscan apply condition"
-			"attribute_class"	"hitscan apply condition"
-			"description_string"	"Test Attribute!"
+			"name"	"test attribute 1"
+			"attribute_class"	"hitscan_cond_active"
+			"description_string"	"Test Attribute 1"
+			"description_format"	"value_is_additive"
+			"effect_type"	"positive"
+		}
+		"30061"
+		{
+			"name"	"test attribute 2"
+			"attribute_class"	"hitscan_cond_target"
+			"description_string"	"Test Attribute 2"
+			"description_format"	"value_is_additive"
+			"effect_type"	"positive"
+		}
+		"30062"
+		{
+			"name"	"test attribute 3"
+			"attribute_class"	"hitscan_cond_duration"
+			"description_string"	"Test Attribute 3"
+			"description_format"	"value_is_additive"
+			"effect_type"	"positive"
+		}
+		"30063"
+		{
+			"name"	"test attribute 4"
+			"attribute_class"	"hitscan_cond_id1"
+			"description_string"	"Test Attribute 4"
+			"description_format"	"value_is_additive"
+			"effect_type"	"positive"
+		}
+		"30064"
+		{
+			"name"	"test attribute 5"
+			"attribute_class"	"hitscan_cond_id2"
+			"description_string"	"Test Attribute 5"
 			"description_format"	"value_is_additive"
 			"effect_type"	"positive"
 		}
