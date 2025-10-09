@@ -2,7 +2,6 @@
 {
 	"$baseTexture" "models/workshop/weapons/c_models/c_lakeshot/c_lakeshot_blue"
 	"$basemapalphaphongmask" "1"
-	"$nocull" "1"
 
 	"$phong" "1"
 	"$phongexponent" "25"
@@ -70,6 +69,9 @@
 			"srcVar1" "$color2"
 			"srcVar2" "$yellow"
 			"resultVar" "$color2"
+		}
+		"WeaponSkin"
+		{
 		}
 	}
 }

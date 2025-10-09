@@ -1,4 +1,4 @@
-"VertexlitGeneric"
+"SDK_VertexlitGeneric"
 {
 	"$baseTexture" "models\weapons\v_baseball\baseball_sheet"
 	"$bumpmap" "models\weapons\v_baseball\baseball_normal"

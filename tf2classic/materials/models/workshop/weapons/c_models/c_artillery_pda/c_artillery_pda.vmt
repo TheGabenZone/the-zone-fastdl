@@ -1,4 +1,4 @@
-"VertexLitGeneric"
+"SDK_VertexlitGeneric"
 {
 	"$basetexture"	"models/workshop/weapons/c_models/c_artillery_pda/c_artillery_pda"
 	"$bumpmap"		"models/workshop/weapons/c_models/c_artillery_pda/c_artillery_pda_normal"
