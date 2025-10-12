@@ -19044,3 +19044,68 @@
 	"wave"		")weapons/HeavySword_HitWorld.wav"
 
 }
+
+// ------------------------------------------------------------------------------------ //
+// Monocular
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Monocular.Single"
+{
+    "channel"    "CHAN_WEAPON"
+    "soundlevel"    "SNDLVL_NORM"
+    "volume"    "1.0"
+    "rndwave"
+    {
+        "wave"        ")weapons/monocular_fire.wav"
+    }
+}
+"Weapon_Monocular.SingleCrit"
+{
+    "channel"    "CHAN_WEAPON"
+    "soundlevel"    "SNDLVL_NORM"
+    "volume"    "1.0"
+    "rndwave"
+    {
+        "wave"        ")weapons/monocular_fire_crit.wav"
+    }
+}
+"Weapon_Monocular.SmallExplode"
+{
+    "channel"    "CHAN_WEAPON"
+    "soundlevel"	"SNDLVL_NORM"
+    "volume"    "1.0"
+	"pitch"		"PITCH_NORM"
+    "rndwave"
+    {
+        "wave"        ")weapons/monocular_small_explode1.wav"
+		"wave"        ")weapons/monocular_small_explode2.wav"
+    }
+}
+"Weapon_Monocular.Reload_Load"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"	"1.0"
+	"wave"		")weapons/monocular_reload_load.wav"
+}
+"Weapon_Monocular.Reload_Open"
+{
+	"channel"	"CHAN_AUTO"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"	"1.0"
+	"wave"		")weapons/monocular_reload_open.wav"
+}
+"Weapon_Monocular.Reload_Close"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"	"1.0"
+	"wave"		")weapons/monocular_reload_close.wav"
+}
+"Weapon_Monocular.Draw"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"	".5"
+	"wave"		")weapons/monocular_draw.wav"
+}
