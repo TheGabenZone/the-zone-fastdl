@@ -8751,11 +8751,6 @@ Weapon by: 'The One Of Wonders'"
 					"attribute_class"	"set_charge_type"
 					"value"				"1"
 				}
-				"assist charge healer" 
-				{
-					"attribute_class"	"assist charge healer"
-					"value"				"5 512 50 5"
-				}
 			}
 			"visuals"
 			{
@@ -28584,6 +28579,11 @@ Weapon by: 'The One Of Wonders'"
 				{
 					"attribute_class"	"mult_airblast_pushback_scale"
 					"value"				"1"
+				}
+				"assist charge healer" 
+				{
+					"attribute_class"	"assist charge healer"
+					"value"				"5 512 50 5"
 				}
 			}
 			"mouse_pressed_sound"		"#ui/item_metal_weapon_pickup.wav"
