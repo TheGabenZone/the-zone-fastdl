@@ -1,4 +1,4 @@
-SDK_VertexLitGeneric
+"VertexLitGeneric"
 {
 	"$baseTexture" "models\weapons\v_bfg\bfg"
   	  "$selfillum" "1"
@@ -22,13 +22,6 @@ SDK_VertexLitGeneric
 	"$glowcolor" 		"1"
 	"$cloakPassEnabled" 	"1"
 	"$yellow" 		"0"
-	"$sheenPassEnabled" "1"
-
-	"$sheenmap" 		"cubemaps/cubemap_sheen001"
-	"$sheenmapmask" 		"Effects/AnimatedSheen/animatedsheen0"
-	"$sheenmaptint" 		"[ 1 1 1 ]"
-	"$sheenmapmaskframe" 	"0"
-	"$sheenindex" 		"0"
 
 	"Proxies"
 	{
@@ -58,12 +51,6 @@ SDK_VertexLitGeneric
 			"srcVar1" 	"$color2"
 			"srcVar2" 	"$yellow"
 			"resultVar" 	"$color2"
-		}
-		"AnimatedWeaponSheen"
-		{
-			"animatedtexturevar" 		"$sheenmapmask"
-			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
-			"animatedtextureframerate" 		"40"
 		}
 	}
 }
