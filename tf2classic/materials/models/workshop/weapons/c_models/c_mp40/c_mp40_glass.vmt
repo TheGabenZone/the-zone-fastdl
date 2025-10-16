@@ -22,41 +22,48 @@
 	"$envmap" "env_cubemap"
 	"$envmaptint" "[.3 .3 .2]"
 
-	//---------------
-	// Visual Effects
-	//---------------
-	"$glowcolor" 		"1"
-	"$cloakPassEnabled" 	"1"
-	"$yellow" 		"0"
+	"$glowcolor" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+
+	"$yellow" "0"
 
 	"Proxies"
 	{
-		"ModelGlowColor"
+		"AnimatedWeaponSheen"
 		{
-			"resultVar" 	"$glowcolor"
-		}
-		"Equals"
-		{
-			"srcVar1"  	"$glowcolor"
-			"resultVar" 	"$selfillumtint"
-		}
-		"Equals"
-		{
-			"srcVar1"  	"$glowcolor"
-			"resultVar" 	"$color2"
+			"animatedtexturevar" 		"$sheenmapmask"
+			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+			"animatedtextureframerate" 		"40"
 		}
 		"invis"
 		{
 		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
 		"YellowLevel"
 		{
-			"resultVar" 	"$yellow"
+			"resultVar" "$yellow"
 		}
 		"Multiply"
 		{
-			"srcVar1" 	"$color2"
-			"srcVar2" 	"$yellow"
-			"resultVar" 	"$color2"
+			"srcVar1" "$color2"
+			"srcVar2" "$yellow"
+			"resultVar" "$color2"
 		}
 	}
 }
+
