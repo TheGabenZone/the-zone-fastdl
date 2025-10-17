@@ -6,8 +6,8 @@
 	"$detail" "models/workshop/weapons/c_models/c_space_bow/c_space_bow_energystreak"
 	"$detailblendmode" "1"
 	"$detailscale" "2"
+	"$detailblendfactor" "0.55"
 
-	
 	"$phong" "1"
 	"$phongexponent" "3"
 	"$phongboost" ".2"	
@@ -21,14 +21,13 @@
 
 	//"$envmap" "models/workshop/weapons/c_models/c_space_bow/c_space_bow_energy_cubemap"
 	//"$envmapcontrast" ".2"
-	//"$envmaptint" "[0.5 0.7 1]"
+	//"$envmaptint" "[.05 .01 .01]"
+
+	"$glowcolor" "1"
 
 	"$selfillum" "1"
 	"$selfIllumFresnel" "1"
 	"$selfIllumFresnelMinMaxExp" "[.1 1.1 1]"
-
-	"$glowcolor" "1"
-
 
 	// Variables for the cloak effect
 	"$cloakPassEnabled"     "1"
@@ -78,18 +77,19 @@
 			"srcVar2" "$yellow"
 			"resultVar" "$color2"
 		}
+
 		"TextureScroll"
 		{
 		"textureScrollVar" "$detailtexturetransform"
 		"textureScrollRate" 0.1
 		"textureScrollAngle" 0
- 		 }
-		Sine
+ 		}
+		"Sine"
 		{
 			resultVar	$selfillumtint // The shader parameter to be manipulated
 			sineperiod	3
 			sinemin		.1
 			sinemax		2
 		}
-        	}
+	}
 }

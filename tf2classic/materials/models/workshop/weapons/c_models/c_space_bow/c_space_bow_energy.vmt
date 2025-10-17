@@ -83,13 +83,13 @@
 		"textureScrollVar" "$detailtexturetransform"
 		"textureScrollRate" 0.1
 		"textureScrollAngle" 0
- 		 }
-		Sine
+ 		}
+		"Sine"
 		{
 			resultVar	$selfillumtint // The shader parameter to be manipulated
 			sineperiod	3
 			sinemin		.1
 			sinemax		2
 		}
-        	}
+	}
 }

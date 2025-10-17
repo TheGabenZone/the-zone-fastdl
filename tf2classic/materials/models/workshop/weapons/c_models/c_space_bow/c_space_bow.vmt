@@ -72,12 +72,12 @@
 			"srcVar2" "$yellow"
 			"resultVar" "$color2"
 		}
-		Sine
+		"Sine"
 		{
 			resultVar	$selfillumtint // The shader parameter to be manipulated
 			sineperiod	3
 			sinemin		.3
 			sinemax		.8
 		}
-        	}
+	}
 }

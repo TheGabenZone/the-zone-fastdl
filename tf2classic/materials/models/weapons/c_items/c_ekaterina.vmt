@@ -11,7 +11,6 @@
 	"$phongfresnelranges"	"[.2 .5 1]"
 	"$halflambert" "1"
 
-
 //	"$phongtint" "[1 1 .7]"
 
 	"$basemapalphaphongmask" "1"
@@ -20,11 +19,6 @@
 
 //	"$phongexponent" "55"
 //	"$phongboost" "1"
-
-
-//	"$commadd_phongexponent" "30"
-//	"$commadd_phongboost" 	"22.5"
-//	"$commweapon"		"0"
 	
 //	"$basephongexponent" "15"
 //	"$basephongboost" "5"
@@ -35,71 +29,41 @@
 
 	"360?$color2" "[ 0.4 0.4 0.4 ]"
 
-	"$glowcolor" "1"
-
-	// Cloaking
-	"$cloakPassEnabled" "1"
-	"$sheenPassEnabled" "1"
-
-	"$sheenmap" 		"cubemaps\cubemap_sheen001"
-	"$sheenmapmask" 		"Effects\AnimatedSheen\animatedsheen0"
-	"$sheenmaptint" 		"[ 1 1 1 ]"
-	"$sheenmapmaskframe" 	"0"
-	"$sheenindex" 		"0"
+	//---------------
+	// Visual Effects
+	//---------------
+	"$glowcolor" 		"1"
+	"$cloakPassEnabled" 	"1"
+	"$yellow" 		"0"
 
 	"Proxies"
 	{
-		"AnimatedWeaponSheen"
+		"ModelGlowColor"
 		{
-			"animatedtexturevar" 		"$sheenmapmask"
-			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
-			"animatedtextureframerate" 		"40"
+			"resultVar" 	"$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  	"$glowcolor"
+			"resultVar" 	"$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  	"$glowcolor"
+			"resultVar" 	"$color2"
 		}
 		"invis"
 		{
 		}
-		"ModelGlowColor"
+		"YellowLevel"
 		{
-			"resultVar" "$glowcolor"
-		}
-		"Equals"
-		{
-			"srcVar1"  "$glowcolor"
-			"resultVar" "$selfillumtint"
-		}
-		"Equals"
-		{
-			"srcVar1"  "$glowcolor"
-			"resultVar" "$color2"
-		}
-		"CommunityWeapon"
-		{
-			"resultVar" "$commweapon"
+			"resultVar" 	"$yellow"
 		}
 		"Multiply"
 		{
-			"srcVar1"  "$commweapon"
-			"srcVar2"  "$commadd_phongexponent" 
-			"resultVar" "$tempvar" 
+			"srcVar1" 	"$color2"
+			"srcVar2" 	"$yellow"
+			"resultVar" 	"$color2"
 		}
-		"Add"
-		{
-			"srcVar1"  "$tempvar" 
-			"srcVar2"  "$basephongexponent" 
-			"resultVar" "$phongexponent" 
-		}
-		"Multiply"
-		{
-			"srcVar1"  "$commweapon"
-			"srcVar2"  "$commadd_phongboost" 
-			"resultVar" "$tempvar" 
-		}
-		"Add"
-		{
-			"srcVar1"  "$tempvar" 
-			"srcVar2"  "$basephongboost"
-			"resultVar" "$phongboost" 
-		}
-
 	}
 }

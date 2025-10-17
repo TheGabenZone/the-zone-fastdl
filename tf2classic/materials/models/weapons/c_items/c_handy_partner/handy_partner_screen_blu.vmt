@@ -1,4 +1,4 @@
-SDK_UnlitGeneric
+"UnlitGeneric"
 {
 	"$basetexture"	"models\weapons\c_items\c_handy_partner\handy_partner_screen_blu"
 	"$surfaceprop"	"default"

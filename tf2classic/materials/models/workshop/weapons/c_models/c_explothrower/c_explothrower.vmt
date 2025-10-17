@@ -70,8 +70,5 @@
 			"srcVar2" "$yellow"
 			"resultVar" "$color2"
 		}
-		"WeaponSkin"
-		{
-		}
 	}
 }

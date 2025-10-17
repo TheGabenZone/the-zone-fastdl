@@ -8,8 +8,6 @@
 	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
 	"$phongfresnelranges"	"[.25 .5 1]"
 	"$basemapalphaphongmask" "1"
-
-	"$basemapalphaphongmask" "1"
 	
 	"$rimlight" "1"						
 	"$rimlightexponent" "20"				
@@ -17,29 +15,41 @@
 	
 	"360?$color2" "[ 0.9 0.8 0.8 ]"
 
+	//---------------
+	// Visual Effects
+	//---------------
+	"$glowcolor" 		"1"
+	"$cloakPassEnabled" 	"1"
+	"$yellow" 		"0"
 
-	"$glowcolor" "1"
-
-	// Cloaking
-	"$cloakPassEnabled" "1"
 	"Proxies"
 	{
-		"vm_invis"
-		{
-		}
 		"ModelGlowColor"
 		{
-			"resultVar" "$glowcolor"
+			"resultVar" 	"$glowcolor"
 		}
 		"Equals"
 		{
-			"srcVar1"  "$glowcolor"
-			"resultVar" "$selfillumtint"
+			"srcVar1"  	"$glowcolor"
+			"resultVar" 	"$selfillumtint"
 		}
 		"Equals"
 		{
-			"srcVar1"  "$glowcolor"
-			"resultVar" "$color2"
+			"srcVar1"  	"$glowcolor"
+			"resultVar" 	"$color2"
+		}
+		"invis"
+		{
+		}
+		"YellowLevel"
+		{
+			"resultVar" 	"$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1" 	"$color2"
+			"srcVar2" 	"$yellow"
+			"resultVar" 	"$color2"
 		}
 	}
 }
