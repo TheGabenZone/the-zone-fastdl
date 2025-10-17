@@ -14170,11 +14170,6 @@ Weapon by: 'Reagy'"
 					"attribute_class"	"mult_postfiredelay"
 					"value" 			"0.75"
 				}
-				"critboost on kill"
-				{
-					"attribute_class"	"add_onkill_critboost_time"
-					"value"				"5"
-				}
 				"move speed bonus"															
 				{
 					"attribute_class"	"mult_player_movespeed"
@@ -18734,7 +18729,7 @@ Weapon by: 'The One Of Wonders'"
 				"voice pitch scale"															
 				{
 					"attribute_class"	"mult_player_aiming_movespeed"
-					"value"				"5"
+					"value"				"2.35"
 				}
 				"allowed in medieval mode"												
 				{
@@ -26085,9 +26080,9 @@ Edited by: 'Reagy'"
 			"static_attrs"
 			{
 				"override projectile type" 				"2"									
-				"damage bonus hidden"					"1.75"								
+				"damage bonus hidden"					"0.5"								
 				"allowed in medieval mode"				"1"
-				"min_viewmodel_offset"					"10 0 -10"							
+				"min_viewmodel_offset"					"10 0 -10"
 			}
 			"attributes"
 			{
@@ -26099,7 +26094,7 @@ Edited by: 'Reagy'"
 				"mult_item_meter_charge_rate"												
 				{
 					"attribute_class"	"effectbar_recharge_rate"
-					"value"				"0.5"											
+					"value"				"0.25"											
 				}
 				"hand scale"															
 				{
@@ -29456,6 +29451,423 @@ Weapon from: Fred's Fight Starters"
 			}
 			"mouse_pressed_sound"		"#ui/item_metal_weapon_pickup.wav"
 			"drop_sound"			"#ui/item_metal_weapon_drop.wav"
+		}
+		
+//--------------------------------
+//--------------------------------
+//--THE SPRITZENWERFER- 9932-- 
+//--------------------------------
+//--------------------------------
+		"9932"
+		{
+		    "name"						"TF_WEAPON_MEDIC_MINIGUN"				
+			"item_class"				"tf_weapon_minigun"
+			"show_in_armory"			"1"
+			"item_slot"                 "primary"
+			"anim_slot"                 "secondary"
+
+			"item_quality"				"rarity2"
+
+			"propername"				"1"
+			"item_name"					"Spritzenwerfer"
+			"item_type_name"			"Experimental Minigun"
+			"item_description"			"
+Madman, madman! I am such a god-forsaken madman! 
+
+Model by: 'Hau'
+Animations by: 'Raptor Dan'
+Weapon by: 'The One Of Wonders'"
+			"item_logname" 				"Spritzenwerfer"
+			"item_iconname"				"Spritzenwerfer"
+			"image_inventory"			"backpack/weapons/c_models/c_spritzenwerfer/c_spritzenwerfer"
+			"model_world"				"models/weapons/c_models/c_spritzenwerfer/c_spritzenwerfer.mdl"
+			"model_player"				"models/weapons/v_models/v_spritzenwerfer.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"medic"					"1"
+			}
+			"attributes"																	
+			{
+				"add uber charge on hit charge rate modifier"
+				{
+					"attribute_class"	"add_onhit_ubercharge_charge_rate_modifier"
+					"value"				"1"
+				}
+				"add uber charge on hit"
+				{
+					"attribute_class"	"add_onhit_ubercharge"
+					"value"				"0.02"
+				}	
+				"uber build bonus on hit"
+				{
+					"attribute_class"	"uber_build_rate_on_hit"
+					"value"				"10"
+				}	
+				"uber duration decreased on wearer"
+				{
+					"attribute_class"	"add_uber_time"
+					"value"				"0.75"
+				}
+				"weapon_stattrak_module_scale"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"0.25"
+				}
+				"weapon_stattrak_module_scale"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"1.25"
+				}
+				"weapon_stattrak_module_scale"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"				"0.25"
+				}
+				"weapon_stattrak_module_scale"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"0.25"
+				}
+				"punch angle mod add hidden"
+				{
+					"attribute_class"	"punch_angle_mod"
+					"value"				"0.762"
+				}
+				"punch angle mod add hidden"
+				{
+					"attribute_class"	"punch_angle_is_constant"
+					"value"				"1"
+				}
+				"no primary ammo from dispensers fixed"	 
+				{
+					"attribute_class"	"no_primary_ammo_from_dispensers_always"
+					"value"				"1"
+				}
+				"crit mod disabled"															
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+				"strange restriction type 1"
+				{
+					"attribute_class"	"mod_always_draw_tracer_effect"
+					"value"				"1"
+				}	
+			}
+			"visuals"
+			{
+				"sound_double_shot"		"Weapon_Vikels.Shoot"	
+				"sound_burst"			"Weapon_Vikels.ShootCrit"	
+				"sound_single_shot"		"Weapon_FlakGun.WindUp"	
+				"sound_special2"		"Weapon_FlakGun.WindDown"
+				"sound_special3"		"Weapon_FlakGun.Spin"	
+				"sound_empty"           "Weapon_FlakGun.Spin"	
+                "animation_replacement"
+                {
+                    // Borrowed from New Old Weapon Pack, surprised it works on medic!
+                    "ACT_MP_ATTACK_STAND_SECONDARY"                "ACT_MP_ATTACK_STAND_PRIMARY"
+                    "ACT_MP_ATTACK_STAND_PREFIRE"                "ACT_MP_GESTURE_VC_FISTPUMP_SECONDARY"
+                    "ACT_MP_ATTACK_STAND_POSTFIRE"                "ACT_MP_GESTURE_FLINCH_CHEST"
+
+                    "ACT_MP_ATTACK_CROUCH_SECONDARY"            "ACT_MP_ATTACK_CROUCH_PRIMARY"
+                    "ACT_MP_ATTACK_CROUCH_PREFIRE"                "ACT_MP_GESTURE_VC_FISTPUMP_SECONDARY"
+                    "ACT_MP_ATTACK_CROUCH_POSTFIRE"                "ACT_MP_GESTURE_FLINCH_CHEST"
+
+                    "ACT_MP_ATTACK_SWIM_SECONDARY"                "ACT_MP_ATTACK_SWIM_PRIMARY"
+                    "ACT_MP_ATTACK_SWIM_PREFIRE"                "ACT_MP_GESTURE_VC_FISTPUMP_SECONDARY"
+                    "ACT_MP_ATTACK_SWIM_POSTFIRE"                "ACT_MP_GESTURE_FLINCH_CHEST"
+
+                    "ACT_MP_DEPLOYED_IDLE"                        "ACT_MP_STAND_SECONDARY"
+                    "ACT_MP_DEPLOYED_PRIMARY"                    "ACT_MP_RUN_SECONDARY"
+                    "ACT_MP_DEPLOYED"                            "ACT_MP_RUN_SECONDARY"
+
+                    "ACT_MP_CROUCH_DEPLOYED_IDLE"                "ACT_MP_CROUCH_SECONDARY"
+                    "ACT_MP_SWIM_DEPLOYED_PRIMARY"                "ACT_MP_SWIM_SECONDARY"
+                    "ACT_MP_SWIM_DEPLOYED"                        "ACT_MP_SWIM_SECONDARY"                    
+                }			
+			}
+			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+		}
+		
+//--------------------------------
+//--------------------------------
+//--PROTOTYPE NADER  - 9933--
+//--------------------------------
+//--------------------------------
+		"9933"
+		{
+		    "tags"
+			{
+				"bots_cant_use"			"1"														
+			}
+		    "name"						"TF_WEAPON_HEALLAUNCHER_PROTOTYPE"
+			"item_class"                "tf_weapon_heallauncher"
+			"show_in_armory"			"1"
+			"item_slot"					"secondary"
+			"anim_slot"					"item1"
+
+			"item_name_color"           "190 200 233 255"
+
+			"propername"				"0"
+			"item_name"					"Mannhein Medicator"
+			"item_type_name"			"Heal Grenade Launcher"
+			"item_description"			"Weapon reloads rounds individually
+
+Sit still, schweinhund! this will only sting for a moment..
+
+Model by: 'Azi... '
+Animations by: 'Raptor Dan'
+Weapon by: 'The One Of Wonders'"
+			"item_logname" 				"Mannhein Medicator"
+			"item_iconname"				"Mannhein Medicator"
+			"image_inventory"			"backpack/weapons/c_models/c_nader_prototype/c_nader_prototype"
+			"model_world"				"models/weapons/w_models/w_nader_prototype.mdl"
+			"model_player"				"models/weapons/v_models/v_nader_prototype_medic.mdl"
+			"extra_wearable" 			"models/player/items/nader_backpack.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"medic"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -12"
+				"class select override vcd"				"class_select_nader"
+			}
+			"attributes"
+			{
+				"nader uber explain"
+				{
+					"attribute_class"	"VISUALONLY"
+					"value"				"6"
+				}
+				"nader grenade explain"
+				{
+					"attribute_class" 	"VISUALONLY"
+					"value"				"1"
+				}
+				"nader direct hit explain"
+				{
+					"attribute_class"	"VISUALONLY"
+					"value"				"1"
+				}
+				"single wep deploy time decreased"												
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"				"0.75"
+				}
+				"nader residual heal bonus"
+				{
+					"attribute_class"	"VISUALONLY"
+					"value"				"6.0"
+				}
+				"nader residual heal duration bonus"
+				{
+					"attribute_class"	"VISUALONLY"
+					"value"				"2.0"
+				}
+				"nader direct hit heal penalty"
+				{
+					"attribute_class"	"VISUALONLY"
+					"value"				"0.75"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"0.5"
+				}
+		
+				"hidden separator"		"1"
+
+				"apply heal on explosion"
+				{
+					"attribute_class"	"apply_heal_explosion"
+					"value"				"30"
+				}
+				"explode on world"
+				{
+					"attribute_class"	"set_detonate_mode"
+					"value"				"3"
+				}
+				"residual heal rate"
+				{
+					"attribute_class"	"residual_heal_rate"
+					"value"				"20"
+				}
+				"residual heal duration"
+				{
+					"attribute_class"	"residual_heal_duration"
+					"value"				"4"
+				}
+				"reduce healing on indirect hit"
+				{
+					"attribute_class"	"apply_heal_explosion_reduced_indirect"
+					"value"				"0.5"
+				}
+				"adjust burst healing when stacking"
+				{
+					"attribute_class"	"apply_heal_explosion_stacking_adjust"
+					"value"				"5"
+				}
+				"adjust residual healing when stacking"
+				{
+					"attribute_class"	"apply_heal_explosion_residual_adjust"
+					"value"				"5"
+				}
+				"fuse bonus"
+				{
+					"attribute_class"	"fuse_mult"
+					"value"				"0.33"
+				}
+				"Projectile speed increased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"1.2"
+				}
+				"weapon_stattrak_module_scale"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"				"0.5"
+				}
+				"weapon_stattrak_module_scale"
+				{
+					"attribute_class"	"mult_medigun_uberchargerate"
+					"value"				"0.75"
+				}
+                "Reload time no anim speed mod"
+                {
+                    "attribute_class"    "mult_reload_time_noanimmod"
+                    "value"              "1.05"
+                }					
+				"no ammo hidden" 
+				{
+					"attribute_class"	"energy_weapon_no_ammo"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"muzzle_flash"			"muzzle_tranq"
+				"sound_single_shot"     "Weapon_MedicatorNader.Single"
+				"sound_burst"           "Weapon_MedicatorNader.Single"
+				"sound_reload"			"Weapon_HealLauncher.Charge"
+				
+				"player_bodygroups"
+				{
+					"medic_backpack"			"1"
+				}
+
+				"animation_replacement"
+				{
+					"ACT_MP_RELOAD_STAND"				"ACT_MP_RELOAD_STAND_ITEM1"
+					"ACT_MP_RELOAD_CROUCH"				"ACT_MP_RELOAD_CROUCH_ITEM1"
+					"ACT_MP_RELOAD_SWIM"				"ACT_MP_RELOAD_SWIM_ITEM1"
+				}
+			}
+			"mouse_pressed_sound"		"#ui/item_metal_slosh_pickup.wav"
+			"drop_sound"				"#ui/item_metal_weapon_drop.wav"
+		}
+		
+		"9934"	
+		{
+		    "name"						"TF_WEAPON_SAPPER_SHREDDER"
+			"prefab"					"weapon_sapper"
+			"item_class"				"tf_weapon_sapper"
+			"item_slot"					"building"
+
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+
+			"show_in_armory"			"1"
+			"item_quality"				"rarity2"
+
+			"item_name"					"Second-Hand Shredder"
+			"item_type_name"			"Shredder"
+			"item_description"			"
+Sometimes a more destructive approach is required.
+
+Model by: 'nano393'
+Weapon by: 'The One Of Wonders'"
+			"item_logname"				"Second-Hand Shredder"
+			"item_iconname"				"Second-Hand Shredder"
+			"image_inventory"			"backpack/weapons/c_models/c_shredder/c_shredder"
+			"model_world"				"models/weapons/c_models/c_shredder/c_shredder.mdl"
+			"model_player"				"models/weapons/c_models/c_shredder/c_shredder.mdl"
+			"attach_to_hands"			"1"
+			"used_by_classes"
+			{
+				"spy"				"1"
+			}
+			"attributes"
+			{
+			    "sapper damage bonus"											
+				{
+					"attribute_class"	"mult_sapper_damage"
+					"value"				"1.75"
+				}
+				"sapper health penalty"											
+				{
+					"attribute_class"	"mult_sapper_health"
+					"value"				"0.25"
+				}
+			}
+		}
+		
+		"9935"	
+		{
+		    "name"						"TF_WEAPON_SAPPER_DECRYPTER"
+			"prefab"					"weapon_sapper"
+			"item_class"				"tf_weapon_sapper"
+			"item_slot"					"building"
+
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+
+			"show_in_armory"			"1"
+			"item_quality"				"rarity2"
+
+			"item_name"					"Bi-Decoder"
+			"item_type_name"			"Sapper"
+			"item_description"			"
+No code or software is safe from deadly amounts of electromagnetic radiation
+
+Model by: 'Sator'
+Weapon by: 'The One Of Wonders'"
+			"item_logname"				"Bi-Decoder"
+			"item_iconname"				"Bi-Decoder"
+			"image_inventory"			"backpack/weapons/c_models/c_decryption_sapper/c_decryption_sapper"
+			"model_world"				"models/weapons/c_models/c_decryption_sapper/c_decryption_sapper.mdl"
+			"model_player"				"models/weapons/c_models/c_decryption_sapper/c_decryption_sapper.mdl"
+			"attach_to_hands"			"1"
+			"used_by_classes"
+			{
+				"spy"				"1"
+			}
+			"attributes"
+			{
+				"sapper health bonus"											
+				{
+					"attribute_class"	"mult_sapper_health"
+					"value"				"4.0"
+				}
+				"sapper damage penalty"											
+				{
+					"attribute_class"	"mult_sapper_damage"
+					"value"				"0.2"
+				}
+				"sapper damages self"											
+				{
+					"attribute_class"	"sapper_damages_self"
+					"value"				"10"
+				}
+				"Sapper Lifetime"											
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"10"
+				}
+			}
 		}
 	}
 	
